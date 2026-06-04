@@ -4,51 +4,276 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- SEO: Search engines read these to understand your page -->
-  <title>kenneth | Portfolio</title>
-  <meta name="description" content="A brief description of your awesome project or portfolio.">
+  <!-- SEO Meta Tags -->
+  <title>KenLog | 3D Art, UI Design & Web Dev Blog by Kenneth Logsdon</title>
+  <meta name="description" content="Welcome to KenLog. A technical blog by Kenneth Lee Logsdon covering 3D modeling in Blender, UI/UX layouts in Photoshop, CSS glassmorphism, and real-time Web3D optimizations.">
+  <meta name="keywords" content="Kenneth Logsdon, KenLog, 3D Art Blog, Blender Tutorial, UI Design Blog, Glassmorphism CSS, WebGL 3D, Frontend Developer Blog">
+  <meta name="author" content="Kenneth Lee Logsdon">
 
-  <!-- Typography: Importing 'Inter' from Google Fonts for a premium look -->
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://kennethlogsdon.github.io/kenlog/">
+  <meta property="og:title" content="KenLog | 3D Art, UI Design & Web Dev Blog">
+  <meta property="og:description" content="Technical articles and design breakdowns on Blender modeling, UI/UX, and interactive web design.">
+  <meta property="og:image" content="3d%20model.png">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://kennethlogsdon.github.io/kenlog/">
+  <meta property="twitter:title" content="KenLog | 3D Art, UI Design & Web Dev Blog">
+  <meta property="twitter:description" content="Technical articles and design breakdowns on Blender modeling, UI/UX, and interactive web design.">
+  <meta property="twitter:image" content="3d%20model.png">
+
+  <!-- Typography: Outfit & Space Grotesk -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-  <!-- CSS: Link to your stylesheet (make sure you have a style.css file) -->
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
   <!-- Navigation Bar -->
-  <header>
-    <nav>
-      <div class="logo">MyBrand.</div>
-      <ul class="nav-links">
-        <li><a href="#about">About</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
+  <header id="main-header">
+    <nav class="nav-container">
+      <div class="logo" id="header-logo"><span class="logo-accent">Ken</span>Log</div>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#home" class="nav-link active">Home</a></li>
+        <li><a href="#featured" class="nav-link">Featured</a></li>
+        <li><a href="#posts" class="nav-link">Articles</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#newsletter" class="nav-link">Newsletter</a></li>
       </ul>
     </nav>
   </header>
 
-  <!-- Main Content Area -->
-  <main>
+  <!-- Background Orbs -->
+  <div class="bg-glow" id="glow-1"></div>
+  <div class="bg-glow" id="glow-2"></div>
 
-    <!-- Hero Section: The first thing visitors see -->
-    <section id="hero" class="hero">
-      <h1>Hello, I'm <span class="highlight">kenneth</span></h1>
-      <p>I build elegant and dynamic web applications.</p>
-      <a href="#projects" class="btn-primary">View My Work</a>
+  <!-- Main Content Area -->
+  <main class="blog-container">
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+      <span class="hero-tag">A Dev & Design Journal</span>
+      <h1 class="hero-title">Sculpting in Pixels and Polygons</h1>
+      <p class="hero-subtitle">Exploring the intersection of hard-surface 3D art, high-fidelity user interface design, and front-end code.</p>
     </section>
 
-    <!-- Additional sections like About, Projects goes here -->
+    <!-- Featured Post -->
+    <section id="featured" class="featured-section">
+      <h2 class="section-heading">Latest Insight</h2>
+      <div class="featured-card">
+        <div class="featured-img-container">
+          <div class="image-overlay"></div>
+          <!-- References the user's actual local 3D model PNG -->
+          <img src="3d%20model.png" alt="Hard-surface Blender render showcase" class="featured-img">
+        </div>
+        <div class="featured-content">
+          <div class="post-meta">
+            <span class="post-category tag-3d">3D Modeling</span>
+            <span class="post-read-time">8 min read</span>
+          </div>
+          <h3 class="post-title"><a href="#">Sculpting the Future: Hard-Surface Workflows in Blender 4.x</a></h3>
+          <p class="post-excerpt">Hard-surface modeling is the backbone of details, props, and vehicle designs. Here is an in-depth breakdown of my modeling toolkit, essential beveling tricks, and subdivision surface workflows to maintain perfect edge highlights.</p>
+          <div class="post-footer">
+            <div class="author-info">
+              <span class="author-name">Kenneth Logsdon</span>
+              <span class="post-date">June 04, 2026</span>
+            </div>
+            <a href="#" class="read-more-btn">Read Article &rarr;</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Blog Posts Grid & About Sidebar -->
+    <div class="content-layout" id="posts">
+      
+      <!-- Recent Articles -->
+      <section class="articles-list">
+        <h2 class="section-heading">Recent Articles & Showcases</h2>
+        <div class="articles-grid">
+          
+          <!-- Post 1: Web3D Optimization -->
+          <article class="post-card">
+            <div class="post-card-content">
+              <div class="post-meta">
+                <span class="post-category tag-tech">WebGL / Tech</span>
+                <span class="post-read-time">6 min read</span>
+              </div>
+              <h3 class="post-card-title"><a href="#">Optimizing 3D Models for WebGL & Real-Time Renders</a></h3>
+              <p class="post-card-excerpt">Displaying interactive 3D assets on standard web pages requires rigorous optimization. Learn how to bake PBR normal maps, reduce vertex counts, and export clean GLTF/GLB models for instant browser loading.</p>
+              <div class="post-card-footer">
+                <span class="post-date">May 28, 2026</span>
+                <a href="#" class="read-more-link">Read &rarr;</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Post 2: UI Design Guide -->
+          <article class="post-card">
+            <div class="post-card-content">
+              <div class="post-meta">
+                <span class="post-category tag-ui">UI/UX Design</span>
+                <span class="post-read-time">5 min read</span>
+              </div>
+              <h3 class="post-card-title"><a href="#">Design Guide: Achieving Glassmorphism in Modern Web UIs</a></h3>
+              <p class="post-card-excerpt">The frosted glass aesthetic is elegant but tricky. We explore CSS backdrop-filter filters, layer contrasts, shadows, and techniques to maintain accessible contrast levels across diverse user backgrounds.</p>
+              <div class="post-card-footer">
+                <span class="post-date">May 18, 2026</span>
+                <a href="#" class="read-more-link">Read &rarr;</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Post 3: Speed Design Video Embed (from sequence 3.webloc) -->
+          <article class="post-card">
+            <div class="post-card-content">
+              <!-- Responsive YouTube Embed -->
+              <div class="video-container" style="position:relative; width:100%; height:0; padding-bottom:56.25%; border-radius:14px; overflow:hidden; border:1px solid var(--card-border); margin-bottom:1.5rem;">
+                <iframe src="https://www.youtube.com/embed/x6vda1Zvpig" title="3D Modeling Speed Design Showcase" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="position:absolute; top:0; left:0; width:100%; height:100%; border:none;"></iframe>
+              </div>
+              <div class="post-meta">
+                <span class="post-category tag-3d">Video Showcase</span>
+                <span class="post-read-time">5 min watch</span>
+              </div>
+              <h3 class="post-card-title"><a href="https://www.youtube.com/watch?v=x6vda1Zvpig" target="_blank" rel="noopener noreferrer">3D Modeling speed design & timelapse</a></h3>
+              <p class="post-card-excerpt">Watch my step-by-step design process recorded in Blender. This timelapse covers blocking out primary volumes, detailing with boolean subdivision cuts, and setting up studio lighting setups to generate high-resolution renders.</p>
+              <div class="post-card-footer">
+                <span class="post-date">May 10, 2026</span>
+                <a href="https://www.youtube.com/watch?v=x6vda1Zvpig" target="_blank" rel="noopener noreferrer" class="read-more-link">Watch on YouTube &rarr;</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Post 4: Lighting & Materials -->
+          <article class="post-card">
+            <div class="post-card-content">
+              <!-- References user's local combo-1.png image -->
+              <div class="post-card-image-holder" style="width:100%; height: 200px; margin-bottom: 1.25rem; border-radius: 12px; overflow:hidden; border:1px solid var(--card-border);">
+                <img src="combo-1.png" alt="Render layout setup" style="width:100%; height:100%; object-fit:cover; transition: transform 0.5s ease;">
+              </div>
+              <div class="post-meta">
+                <span class="post-category tag-3d">3D Rendering</span>
+                <span class="post-read-time">7 min read</span>
+              </div>
+              <h3 class="post-card-title"><a href="#">Lighting in Blender Cycles: Tips for Cinematic Materials</a></h3>
+              <p class="post-card-excerpt">Lighting makes or breaks a render. Discover how to arrange custom studio setups, configure HDRI maps, tweak color management profiles, and optimize Cycles renders for rich metal textures.</p>
+              <div class="post-card-footer">
+                <span class="post-date">May 05, 2026</span>
+                <a href="#" class="read-more-link">Read &rarr;</a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </section>
+
+      <!-- Sidebar -->
+      <aside class="blog-sidebar">
+        <!-- About Widget -->
+        <div class="sidebar-widget widget-about" id="about">
+          <h3>Author Profile</h3>
+          <div class="profile-pic-placeholder">KL</div>
+          <h4>Kenneth Lee Logsdon</h4>
+          <p class="sidebar-bio">3D Artist, UI Designer, and Front-End Developer. Bridging technical precision and clean design. Creating interactive 3D spaces on the web.</p>
+          <div class="social-links">
+            <a href="https://github.com/logsdonkennethlee-ui" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-github"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+            </a>
+            <a href="https://kennethlogsdon.github.io/https-logsdonkennethlee-ui.github.io/" target="_blank" rel="noopener noreferrer" aria-label="Portfolio Portfolio">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-briefcase"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Featured Video Sidebar Widget -->
+        <div class="sidebar-widget widget-video" id="video-widget">
+          <h3>Latest Speed Design</h3>
+          <p>Check out my speed modeling workflow recording:</p>
+          <div class="video-container" style="position:relative; width:100%; height:0; padding-bottom:56.25%; border-radius:12px; overflow:hidden; border:1px solid var(--card-border); margin-top:1rem;">
+            <iframe src="https://www.youtube.com/embed/x6vda1Zvpig" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="position:absolute; top:0; left:0; width:100%; height:100%; border:none;"></iframe>
+          </div>
+        </div>
+
+        <!-- Newsletter Widget -->
+        <div class="sidebar-widget widget-newsletter" id="newsletter">
+          <h3>Newsletter</h3>
+          <p>Get notified when I release new tutorials, Blender techniques, or front-end guidelines.</p>
+          <form class="newsletter-form" onsubmit="event.preventDefault(); alert('Subscribed! (Demo only)');">
+            <input type="email" placeholder="Your Email" required aria-label="Email address" id="newsletter-email">
+            <button type="submit" class="btn-subscribe" id="btn-subscribe">Subscribe</button>
+          </form>
+        </div>
+      </aside>
+
+    </div>
 
   </main>
+
   <!-- Footer -->
   <footer>
-    <p>&copy; 2026 kenneth. Built with HTML & CSS.</p>
+    <div class="footer-content">
+      <p>&copy; 2026 KenLog. Kenneth Lee Logsdon. All rights reserved.</p>
+      <p class="footer-meta">Built with clean HTML & HSL CSS glassmorphism.</p>
+    </div>
   </footer>
 
-  <!-- JavaScript: Link to your logic scripts at the bottom for faster page load -->
-  <script src="script.js"></script>
+  <script>
+    // Header navigation scroll effect
+    const header = document.getElementById('main-header');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 40) {
+        header.classList.add('scrolled');
+      } else {
+        header.classList.remove('scrolled');
+      }
+    });
+
+    // Navigation toggle for mobile
+    const navToggle = document.getElementById('nav-toggle');
+    const navLinks = document.getElementById('nav-links');
+    
+    navToggle.addEventListener('click', () => {
+      navToggle.classList.toggle('active');
+      navLinks.classList.toggle('active');
+    });
+
+    // Close menu when navigation links are clicked
+    const links = document.querySelectorAll('.nav-link');
+    links.forEach(link => {
+      link.addEventListener('click', () => {
+        navToggle.classList.remove('active');
+        navLinks.classList.remove('active');
+      });
+    });
+
+    // Active link highlighting on scroll
+    const sections = document.querySelectorAll('section, div.content-layout');
+    window.addEventListener('scroll', () => {
+      let current = '';
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.clientHeight;
+        if (window.pageYOffset >= sectionTop - 120) {
+          current = section.getAttribute('id');
+        }
+      });
+
+      links.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href').slice(1) === current) {
+          link.classList.add('active');
+        }
+      });
+    });
+  </script>
 </body>
 </html>
